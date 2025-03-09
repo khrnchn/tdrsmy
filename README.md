@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# tadarus.my (tdrsmy)
 
-## Getting Started
+**[tadarus.my](https://tadarus.my)** is a web app for Malaysian Muslims to track group Quran reading (tadarus) during Ramadan. Join a "geng," log your pages, and khatam the Quran together—featuring a leaderboard and a shareable "Tadarus Wrapped" summary by Ramadan’s end. Built for #GodamSahur 2025, it’s a modern take on a Ramadan tradition.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 1. Tadarus Circles
+- **Create or Join**: Start your own "Tadarus Geng" or join one with an invite code.
+- **Group Goal**: Set a target (default: 604 pages, one Quran) and watch your circle’s progress grow.
+- **Real-time Updates**: Progress bar updates live as members log their tadarus, powered by Pusher.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Tadarus Logging
+- **Quick Logging**: Add your pages read (e.g., "5 pages" or "Surah Al-Baqarah") in a snap.
+- **Your Contribution**: See how much you’ve added to your circle’s total, keeping it group-focused.
+- **Smart Checks**: Ensures valid page counts and links logs to your circle.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Leaderboard
+- **Top Gengs**: Ranks the top 10 circles by total pages read, refreshed in real-time.
+- **Friendly Rivalry**: Spot which "Geng Quran" is ahead—perfect for some Ramadan motivation.
+- **Clean Design**: Uses Shadcn/UI’s Table component for a sharp, modern layout.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 4. Tadarus Wrapped
+- **Ramadan Recap**: Rolls out after March 31, 2025—shows your circle’s total pages, your share, and the top reader.
+- **Shareable Card**: Get a custom PNG (e.g., “Geng Masjid KL khatam 2x!”) via Canvas API.
+- **Digital Memory**: A keepsake to share on WhatsApp or X, celebrating your Ramadan journey.
 
-## Learn More
+## Tech Stack
+- **Framework**: Next.js 14 (App Router)
+- **Runtime**: Bun
+- **UI**: Shadcn/UI with Tailwind CSS
+- **Database**: Drizzle ORM + Vercel Postgres
+- **Auth**: Clerk
+- **Real-time**: Pusher
+- **Deployment**: Vercel (live at tadarus.my)
 
-To learn more about Next.js, take a look at the following resources:
+## Development
+- **Setup**: `bun create next-app tdrsmy --typescript`, then `bun add drizzle-orm @vercel/postgres @clerk/nextjs pusher pusher-js shadcn-ui`.
+- **Run**: `bun run dev`
+- **Deploy**: `bunx vercel --prod` (linked to tadarus.my).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Status
+- Built during Ramadan 2025 (March 9–April 1).
+- Submitted to #GodamSahur 2025 by April 1.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**tdrsmy** – Khatam made simple. Ramadan made social.
