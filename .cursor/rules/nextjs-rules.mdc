@@ -1,0 +1,10 @@
+---
+description: generic nextjs tasks
+globs: 
+---
+
+# Your rule content
+
+- use server actions instead of APIs for queries. then, fetch data in server component. if you need the data in a client component, pass as props.
+- avoid using enums in schema. enums are a pain in the ass when dealing with migrations. use object constants.
+- utilize nextjs features like react server components etc.
